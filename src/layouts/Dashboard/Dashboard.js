@@ -22,7 +22,6 @@ import logo from "assets/img/reactlogo.png";
 
 // create custom theme configuration
 const theme = createMuiTheme({
-  direction: 'rtl',
   typography: {
     fontFamily: '"Vazir", sans-serif'
   }
@@ -69,6 +68,7 @@ class App extends React.Component {
         <div  generateClassName={generateClassName}>
           <div className={classes.wrapper}>
             <Sidebar
+            style={{float:'right'}}
               routes={dashboardRoutes}
               logoText={"Creative Tim"}
               logo={logo}

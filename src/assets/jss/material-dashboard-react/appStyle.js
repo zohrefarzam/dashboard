@@ -16,7 +16,7 @@ const appStyle = theme => ({
       width: `calc(100% - ${drawerWidth}px)`
     },
     overflow: "auto",
-    position: "relative",
+    position: "absolute",
     float: "left",
     ...transition,
     maxHeight: "100%",
