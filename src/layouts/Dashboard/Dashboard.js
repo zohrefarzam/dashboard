@@ -4,9 +4,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // import MuiThemeProvider and createMuiTheme to create custom theme
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 // import jss and jss-rtl for change all style to support RTL
-import { create } from 'jss';
-import rtl from 'jss-rtl';
-import JssProvider from 'react-jss/lib/JssProvider';
 import { createGenerateClassName, jssPreset } from 'material-ui/styles';
 
 // creates a beautiful scrollbar
@@ -31,7 +28,7 @@ const theme = createMuiTheme({
   }
 });
 // Configure JSS
-const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
+
 
 // Custom Material-UI class name generator.
 const generateClassName = createGenerateClassName();
@@ -69,7 +66,7 @@ class App extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
-        <JssProvider jss={jss} generateClassName={generateClassName}>
+        <div  generateClassName={generateClassName}>
           <div className={classes.wrapper}>
             <Sidebar
               routes={dashboardRoutes}
@@ -98,7 +95,7 @@ class App extends React.Component {
               {this.getRoute() ? <Footer /> : null}
             </div>
           </div>
-        </JssProvider>
+        </div>
       </MuiThemeProvider>
     );
   }
