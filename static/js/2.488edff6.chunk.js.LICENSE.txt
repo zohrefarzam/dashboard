@@ -11,7 +11,7 @@ object-assign
   */
 
 /*!
-  Copyright (c) 2016 Jed Watson.
+  Copyright (c) 2017 Jed Watson.
   Licensed under the MIT License (MIT), see
   http://jedwatson.github.io/classnames
 */
@@ -21,9 +21,9 @@ object-assign
  */
 
 /*!
- * perfect-scrollbar v1.3.0
- * (c) 2017 Hyunje Jun
- * @license MIT
+ * perfect-scrollbar v1.5.0
+ * Copyright 2020 Hyunje Jun, MDBootstrap and Contributors
+ * Licensed under MIT
  */
 
 /**
