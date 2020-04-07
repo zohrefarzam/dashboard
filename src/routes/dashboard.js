@@ -4,6 +4,7 @@ import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
+import LoginPage from '../layouts/LoginPage/index';
 import NotificationsPage from "views/Notifications/Notifications.js";
 
 import {
@@ -68,7 +69,7 @@ const dashboardRoutes = [
     component: Maps
   },
  */
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true,path:"/" , to: "/dashboard", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
