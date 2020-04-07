@@ -7,11 +7,11 @@ import {
   TableBody,
   TableCell
 } from "material-ui";
-
+import { Edit, Delete } from "@material-ui/icons";
 import PropTypes from "prop-types";
-
+import IconCustomButton from '../CustomButtons/IconButton.js';
 import tableStyle from "assets/jss/material-dashboard-react/tableStyle";
-
+import hist from '../../hist'
 function CustomTable({ ...props }) {
   const { classes, tableHead, tableData, tableHeaderColor } = props;
   return (
@@ -44,8 +44,23 @@ function CustomTable({ ...props }) {
                     </TableCell>
                   );
                 })}
-                <button style={{backgroundColor:'red',color:'white',marginTop:'7%',marginLeft:5,borderRadius:5}}>حذف</button>
-                <button style={{backgroundColor:'green',color:'white',marginTop:'7%',borderRadius:5}}>ویرایش</button>
+                <IconCustomButton
+                  
+                  style={{ backgroundColor: 'white',color:'#f44336' }}
+                 
+                >
+                  <Delete  color="red" />
+
+                </IconCustomButton>
+                <IconCustomButton
+                 onClick={() => hist.push("/Edit")}
+                  style={{ backgroundColor: 'white',color:"#4caf50" }}
+
+                >
+                  <Edit />
+
+                </IconCustomButton>
+
               </TableRow>
             );
           })}

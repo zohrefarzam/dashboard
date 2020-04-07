@@ -1,10 +1,10 @@
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
+import TableGrid from "../views/TableList/TableGrid"
 import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
-import LoginPage from '../layouts/LoginPage/index';
+import Login from "../views/Login/Login";
 import NotificationsPage from "views/Notifications/Notifications.js";
 
 import {
@@ -14,7 +14,8 @@ import {
   LibraryBooks,
   BubbleChart,
   LocationOn,
-  Notifications
+  Notifications,
+  Add
 } from "@material-ui/icons";
 
 const dashboardRoutes = [
@@ -26,13 +27,13 @@ const dashboardRoutes = [
     component: TableList
     
   },
-  {
+  /*{
     path: "/user",
     sidebarName: "پروفایل کاربری",
     navbarName: "پروفایل کاربری",
     icon: Person,
     component: UserProfile
-  },
+  },*/
   {
     path: "/notifications",
     sidebarName: "اعلانات",
@@ -69,7 +70,7 @@ const dashboardRoutes = [
     component: Maps
   },
  */
-  { redirect: true,path:"/" , to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true,  to: "/dashboard", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
