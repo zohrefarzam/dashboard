@@ -6,7 +6,8 @@ import { RegularCard, Table, ItemGrid } from "components";
 import { Router, Route, Switch } from "react-router-dom";
 import RegularButton from "../../components/CustomButtons/Button"
 import TableGrid from './TableGrid';
-import Edit from '../Edit/Edit'
+import EditRoute from '../Edit/EditRoute'
+import AddingBrand from '../AddingBrand/AddingBrand'
 function TableList({ ...props }) {
   const { classes } = props;
   return (
@@ -15,7 +16,7 @@ function TableList({ ...props }) {
   
     <Switch>
     <Route path="/dashboard"component={TableGrid} exact />
-    <Route path="/"component={Edit}  />
+    <Route path="/"component={EditRoute}  />
     </Switch>
   </Router>
   );

@@ -9,9 +9,9 @@ import {
   ItemGrid
 } from "components";
 
-import avatar from "assets/img/faces/marc.jpg";
+import avatar from "assets/img/faces/no-image-icon.png";
 import { style } from "@material-ui/system";
-
+import hist from '../../hist'
 function Edit({ ...props }) {
   return (
     <div>
@@ -72,7 +72,16 @@ function Edit({ ...props }) {
                   </ItemGrid>
                 </Grid>
                 <Grid container>
-                
+                <ItemGrid xs={12} sm={12} md={6}>
+                  <div>
+                  <h6>برند ها</h6>
+                    </div>
+                    </ItemGrid>
+                    <ItemGrid xs={12} sm={12} md={6} style={{marginTop: '3%',}}>
+                  <div>
+                  <Button  onClick={() => hist.push("/AddingBrand")} color="primary">اضافه</Button>
+                    </div>
+                    </ItemGrid> 
                 </Grid>
               </div>
             }
